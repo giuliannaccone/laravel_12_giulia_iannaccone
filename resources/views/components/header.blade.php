@@ -19,10 +19,11 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('blog.create')}}">Aggiungi articolo</a>
                 </li>
-                <input type="submit" value="Logout" class="btn btn-primary">
-              </li>
                 <li class="nav-item">
-                  <form action="/logout" method="post"></form>
+                <form action="/logout" method="post">
+                    @csrf
+                    <input type="submit" value="Logout" class="btn btn-primary">
+                  </form>
                 <li class="nav-item">
               @else
                   <a class="nav-link" href="/login">Accedi</a>
